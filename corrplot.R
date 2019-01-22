@@ -1,0 +1,12 @@
+library("corrplot")
+M <- cor(mtcars)
+iris <- read.csv("Iris.csv")
+iris = select(iris,-Species) #Remove Id
+M <- cor(iris)
+corrplot(M, method = "circle")
+corrplot(M, method = "square")
+corrplot(M, method = "ellipse")
+corrplot(M, method = "number")
+corrplot(M, method = "shade")
+corrplot(M, method = "color")
+corrplot(M, method = "pie")
